@@ -22,6 +22,7 @@ namespace Tests
                 .GetManifestResourceStream("Tailspin.SpaceGame.Web.SampleData.scores.json"))
             {
                 _scoreRepository = new LocalDocumentDBRepository<Score>(scoresData);
+
             }
         }
 
@@ -71,5 +72,6 @@ namespace Tests
             // Verify that we received the specified number of items.
             return scores.Count();
         }
+
     }
 }
